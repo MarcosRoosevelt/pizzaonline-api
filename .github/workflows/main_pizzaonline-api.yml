@@ -64,5 +64,5 @@ jobs:
         run: ls -l
           
       - name: Iniciar Aplicação Java
-        run: java -jar ${{ github.workspace }}/target/pizzaonline-0.0.1-SNAPSHOT.jar
+        run: java -jar pizzaonline-0.0.1-SNAPSHOT.jar
 
