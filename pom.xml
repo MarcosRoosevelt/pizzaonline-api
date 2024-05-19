@@ -92,6 +92,19 @@
 				</plugin>
 				<plugin>
 					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-jar-plugin</artifactId>
+					<version>3.2.0</version> <!-- Versão atualizada, se necessário -->
+					<configuration>
+						<archive>
+							<manifest>
+								<mainClass>com.victor.pizzaonline.PizzaonlineApplication</mainClass> <!-- Substitua com a sua classe principal -->
+							</manifest>
+						</archive>
+					</configuration>
+				</plugin>
+
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
 					<artifactId>maven-shade-plugin</artifactId>
 					<version>3.2.4</version> <!-- Versão atualizada -->
 					<configuration>
