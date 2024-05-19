@@ -62,6 +62,11 @@ jobs:
           
       - name: Listar arquivos no diretório
         run: ls -l
+        
+      - name: Configurar a versão do Java
+        uses: actions/setup-java@v2
+        with:
+          java-version: '17'
           
       - name: Iniciar Aplicação Java
         run: java -jar pizzaonline-0.0.1-SNAPSHOT.jar
