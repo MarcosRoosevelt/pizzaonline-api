@@ -22,13 +22,13 @@ jobs:
           java-version: '17'
 
       - name: Build with Maven
-        run: mvn clean install
+        run: mvn clean package
 
-      - name: Upload artifact for deployment job
+      - name: Upload JAR artifact for deployment job
         uses: actions/upload-artifact@v3
         with:
           name: java-app
-          path: '${{ github.workspace }}/target/*.war'
+          path: '${{ github.workspace }}/target/*.jar'
 
   deploy:
     runs-on: ubuntu-latest
@@ -40,7 +40,7 @@ jobs:
       id-token: write #This is required for requesting the JWT
 
     steps:
-      - name: Download artifact from build job
+      - name: Download JAR artifact from build job
         uses: actions/download-artifact@v3
         with:
           name: java-app
@@ -58,5 +58,6 @@ jobs:
         with:
           app-name: 'pizzaonline-api'
           slot-name: 'Production'
-          package: '*.war'
+          package: '*.jar' # Altere para *.jar para refletir o novo tipo de artefato
+
           
