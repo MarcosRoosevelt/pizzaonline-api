@@ -61,8 +61,5 @@ jobs:
           package: '*.jar' # Altere para *.jar para refletir o novo tipo de artefato
           
       - name: Iniciar Aplicação Java
-        run: |
-          chmod +x startup.sh
-          ./startup.sh
-        working-directory: ${{ github.workspace }}
+        run: java -jar ${{ github.workspace }}/target/*.jar
 
