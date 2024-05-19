@@ -60,6 +60,9 @@ jobs:
           slot-name: 'Production'
           package: '*.jar' # Altere para *.jar para refletir o novo tipo de artefato
           
+      - name: Listar arquivos no diretório
+        run: ls -l
+          
       - name: Iniciar Aplicação Java
         run: java -jar ${{ github.workspace }}/target/pizzaonline-0.0.1-SNAPSHOT.jar
 
