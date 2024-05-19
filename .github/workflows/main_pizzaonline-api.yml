@@ -59,5 +59,10 @@ jobs:
           app-name: 'pizzaonline-api'
           slot-name: 'Production'
           package: '*.jar' # Altere para *.jar para refletir o novo tipo de artefato
-
+          
+      - name: Iniciar Aplicação Java
+        run: |
+          chmod +x startup.sh
+          ./startup.sh
+        working-directory: ${{ github.workspace }}
 
