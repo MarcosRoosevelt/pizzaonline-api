@@ -60,4 +60,4 @@ jobs:
           slot-name: 'Production'
           package: '*.jar' # Altere para *.jar para refletir o novo tipo de artefato
 
-          
+
