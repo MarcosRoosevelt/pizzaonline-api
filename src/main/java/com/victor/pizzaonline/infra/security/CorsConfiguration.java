@@ -9,7 +9,7 @@ public class CorsConfiguration implements WebMvcConfigurer {
     @Override
     public void addCorsMappings(CorsRegistry registry) {
         registry.addMapping("/**")
-                .allowedOrigins("http://127.0.0.1:5500/", "https://delightful-island-069d02b0f.5.azurestaticapps.net")
+                .allowedOrigins("http://127.0.0.1:5500/", "https://pizzaonline-cdbnfabqbgdcasa9.brazilsouth-01.azurewebsites.net")
                 .allowedMethods("GET", "POST", "PUT", "DELETE", "OPTIONS", "HEAD", "TRACE", "CONNECT")
                 .allowedHeaders("*")
                 .allowCredentials(true);
